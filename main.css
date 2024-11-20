@@ -1,0 +1,92 @@
+body{
+    background: rgba(0,0,0,.5);
+    margin: 0;
+    color: white;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+.header::after{
+    content: '';
+    height: 80vh;
+    width: 100%;
+    background-image: url(img/arbre_mana.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;    
+}
+.header:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.header:hover .headercontenido{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.headercontenido{
+    position: absolute;
+    z-index: 1; /*pone el bloque frente encima*/    
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 1000ms; 
+    /* margin-top:105px; margin-left:-145; left:50%; top:50%; */   
+}/* lo agregue yo para centrar de manera resposiva*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 200px;
+}
+.title{
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+}
+.text{
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+.contenedor{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 2rem;
+}
+.text-center{
+    text-align: center;
+    margin: auto;
+}
+.grid3{
+    display: grid;
+    /*crea columnas en este caso 3*/
+    grid-template-columns: 1fr 1fr 1fr; /*repeat(3, 1fr) 30px 30px 30 px*/
+    grid-gap: 20px;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.fondoR{
+    background: rgba(9, 148, 212, 0.397);
+    padding: 10px;
+}
+.bg-light{
+    background: #fff;
+    color: rgba(0,0,0,.5);
+}
+.center{
+    text-align: center;
+}
+@media(max-width: 560px;){
+    .header::after{
+        height: 70vh;
+    }
+    .headercontenido{
+        
+    }
+}
